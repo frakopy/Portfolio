@@ -1,8 +1,9 @@
-/*
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
+// Adding some animations from GSAP
+
+gsap.to(".my-name", {x:0, duration: 3, ease: "elastic"});
+gsap.to(".about-me", {y:0, duration: 1, opacity:1, delay:1.5});
+
 
 (function($) {
 
