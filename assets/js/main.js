@@ -33,3 +33,7 @@ gsap.to(".about-me", {y:0, duration: 1, opacity:1, delay:1.5});
 		});
 
 })(jQuery);
+
+ScrollReveal().reveal('.style2', { delay: 600 });
+ScrollReveal().reveal('.style3', { delay: 600 });
+ScrollReveal().reveal('.style4', { delay: 600 });
