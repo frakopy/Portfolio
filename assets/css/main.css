@@ -2027,6 +2027,12 @@ input, select, textarea {
 			z-index: 2;
 		}
 
+
+		.style1 ul li{
+			color: #03C4A1;
+			font-weight: bold;
+		}
+
 		.wrapper.style3 {
 			background-color: #f4f4f4;
 			background-color: #54BAB9;

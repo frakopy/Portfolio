@@ -3,7 +3,7 @@
 particlesJS("particles", {
 	"particles": {
 	  "number": {
-		"value": 380,
+		"value": 150,
 		"density": {
 		  "enable": true,
 		  "value_area": 800
@@ -56,7 +56,7 @@ particlesJS("particles", {
 	  },
 	  "move": {
 		"enable": true,
-		"speed": 6,
+		"speed": 2,
 		"direction": "none",
 		"random": false,
 		"straight": false,
@@ -74,7 +74,7 @@ particlesJS("particles", {
 	  "events": {
 		"onhover": {
 		  "enable": true,
-		  "mode": "grab"
+		  "mode": "repulse"
 		},
 		"onclick": {
 		  "enable": true,
