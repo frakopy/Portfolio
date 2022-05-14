@@ -1,5 +1,14 @@
+const strong = document.getElementById('current-learning')
+
+const observer = new IntersectionObserver(animate_lis)
+observer.observe(strong)
+
 
 // Adding some animations from GSAP
+
+function animate_lis () {
+	gsap.from(".stack", {opacity: 0, stagger: 0.5})
+}
 
 gsap.to(".my-name", {x:0, duration: 3, ease: "elastic"});
 gsap.to(".about-me", {y:0, duration: 1, opacity:1, delay:1.5});
