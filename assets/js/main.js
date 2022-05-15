@@ -1,3 +1,6 @@
+
+//------------------------------- ANIMATIONS --------------------------------------------------------------------------
+
 const strong = document.getElementById('current-learning')
 
 const options = {
@@ -9,13 +12,10 @@ const options = {
 const observer = new IntersectionObserver(animate_lis, options)
 observer.observe(strong)
 
-
-// Adding some animations from GSAP
-
 function animate_lis ( entries, observer ) {
 	entries.forEach(( entry ) => {
 		if (entry.isIntersecting) {
-			gsap.to(".stack", {opacity: 1, stagger: 0.3,  ease: "slow(0.7, 0.7, false)", duration: 1.5})
+			gsap.to(".stack", {opacity: 1, scale:1, stagger: 0.3,  ease: "slow(0.7, 0.7, false)", duration: 0.5})
 			observer.unobserve(strong) //stop to observe the element strong in order to execute the callback only once
 
 			//If we have many elements the best way is to use the property target (entry.target) for each element
@@ -27,6 +27,7 @@ function animate_lis ( entries, observer ) {
 gsap.to(".my-name", {x:0, duration: 3, ease: "elastic"});
 gsap.to(".about-me", {y:0, duration: 1, opacity:1, delay:1.5});
 
+//------------------------------------------------------------------------------------------------------------------------
 
 (function($) {
 
