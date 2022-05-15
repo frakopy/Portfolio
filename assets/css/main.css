@@ -293,6 +293,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		position: relative;
 	}
 
 		.row > * {
@@ -2018,7 +2019,7 @@ input, select, textarea {
 
 		#particles{
 			position: absolute;
-			width: 100%;
+			width: 100vw;
 			height: 100%;
 			z-index: 1;
 		}
@@ -2026,7 +2027,6 @@ input, select, textarea {
 		#technologies, #link-projects{
 			z-index: 2;
 		}
-
 
 		.style1 ul li{
 			color: #03C4A1;
@@ -2320,6 +2320,15 @@ input, select, textarea {
 			section, article {
 				clear: both;
 			}
+
+			#technologies{
+				width: 60vw;
+			}
+
+			#technologies section {
+				border-radius: 90px;
+			}
+	
 
 		/* Button */
 
