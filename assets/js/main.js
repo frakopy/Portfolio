@@ -1,13 +1,27 @@
 const strong = document.getElementById('current-learning')
 
-const observer = new IntersectionObserver(animate_lis)
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0 
+}
+
+const observer = new IntersectionObserver(animate_lis, options)
 observer.observe(strong)
 
 
 // Adding some animations from GSAP
 
-function animate_lis () {
-	gsap.from(".stack", {opacity: 0, stagger: 0.5})
+function animate_lis ( entries, observer ) {
+	entries.forEach(( entry ) => {
+		if (entry.isIntersecting) {
+			gsap.to(".stack", {opacity: 1, stagger: 0.3,  ease: "slow(0.7, 0.7, false)", duration: 1.5})
+			observer.unobserve(strong) //stop to observe the element strong in order to execute the callback only once
+
+			//If we have many elements the best way is to use the property target (entry.target) for each element
+			// observer.unobserve(entry.target)
+		}
+	})
 }
 
 gsap.to(".my-name", {x:0, duration: 3, ease: "elastic"});

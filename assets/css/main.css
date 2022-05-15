@@ -2031,6 +2031,7 @@ input, select, textarea {
 		.style1 ul li{
 			color: #03C4A1;
 			font-weight: bold;
+			opacity: 0;
 		}
 
 		.wrapper.style3 {
