@@ -1,6 +1,32 @@
 
 //------------------------------- ANIMATIONS --------------------------------------------------------------------------
 
+let myVideo = document.getElementById("myvideo")
+let videoFullscreen = document.getElementById("video-full-screen");
+
+if (myVideo && videoFullscreen) {
+	videoFullscreen.addEventListener("click", function (evt) {
+		if (myVideo.requestFullscreen) {
+			myVideo.requestFullscreen();
+		}
+		else if (myVideo.msRequestFullscreen) {
+			myVideo.msRequestFullscreen();
+		}
+		else if (myVideo.mozRequestFullScreen) {
+			myVideo.mozRequestFullScreen();
+		}
+		else if (myVideo.webkitRequestFullScreen) {
+			myVideo.webkitRequestFullScreen();
+			/*
+				*Kept here for reference: keyboard support in full screen
+				* myVideo.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+			*/
+		}
+	}, false);
+}
+
+//------------------------------- ANIMATIONS --------------------------------------------------------------------------
+
 const strong = document.getElementById('current-learning')
 
 const options = {
