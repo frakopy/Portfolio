@@ -1649,9 +1649,14 @@ input, select, textarea {
 			padding: 40px;
 		}
 
-		.image.featured > video{
-			max-width: 97%;
+		.box #myvideo{
+			width: 100%;
+			height: 51.5vh;
 		}
+
+		/* .image.featured > video{
+			max-width: 50%;
+		} */
 
 		.image.left {
 			float: left;
